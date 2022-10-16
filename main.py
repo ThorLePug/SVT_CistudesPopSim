@@ -27,15 +27,6 @@ def nombre_de_femelles(echantillon: list[int]):
 	return n_femelles
 
 
-def moyenne(nb_femelles: list[int]):
-	total = 0
-	taille = len(nb_femelles)
-	for n in nb_femelles:
-		total += n
-	m = total / taille
-	return m
-
-
 def get_graph(taille_echantillon: int, nombre_echantillons_par_serie: int):
 	Graphique(x_axis=[i + 1 for i in range(nombre_echantillons_par_serie)],
 			  y_axis=[nombre_de_femelles(echantillonnage(taille_echantillon)) / taille_echantillon for _ in
